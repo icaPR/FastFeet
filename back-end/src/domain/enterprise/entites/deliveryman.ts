@@ -8,6 +8,16 @@ interface DeliverymanProps {
 }
 
 export class Deliveryman extends Entity<DeliverymanProps> {
+  get name() {
+    return this.props.name;
+  }
+  get cpf() {
+    return this.props.cpf;
+  }
+  get password() {
+    return this.props.password;
+  }
+
   static create(props: DeliverymanProps, id?: UniqueEntityID) {
     const deliveryman = new Deliveryman(props, id);
     return deliveryman;
